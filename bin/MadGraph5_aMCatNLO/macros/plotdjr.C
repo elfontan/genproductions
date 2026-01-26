@@ -1,3 +1,11 @@
+// ###########################################
+// HowToRun:                                 
+// ---------------------------------------------------------------------------
+//   root -l 
+//   root [0] .L plotdjr.C 
+//   root [1] plotdjr("pathTo/RunIISummer20UL18wmLHEGEN.root", "out.root")
+// ---------------------------------------------------------------------------
+
 #include "TFile.h"
 #include "TTree.h"
 #include "TH1D.h"
@@ -141,7 +149,7 @@ void plotdjr(const TString & infile, const TString & outfile) {
   //0 is for NLO with FXFX merging; 
   //1 is for LO with MLM; 
   //2 is for LO with MLM (plotting partons after excluding non-matched partons in wbb/vbf type processes)
-  int typeMC = 2;
+  int typeMC = 1;
   
   TCanvas *c1 = new TCanvas("c1", "c1", 800, 600);
   TPad *pad[5];
